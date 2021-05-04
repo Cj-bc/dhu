@@ -67,9 +67,9 @@ cli
   .command("info", "Get info")
   .option("--head", "launch headfully")
   .action(async (option) =>
-    withLoginedPage(getInfo, { headless: !option.head })
-          .then((data)  => {console.log(data)}
-               ,(error) => {console.error(error)})
+    await withLoginedPage(getInfo, { headless: !option.head })
+                   .then((data)  => {console.log(data)}
+                        ,(error) => {console.error(error)})
   );
 
 cli
