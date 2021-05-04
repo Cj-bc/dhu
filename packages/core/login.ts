@@ -52,6 +52,7 @@ export async function login(
 
   if (error) {
     await removeUserInfo();
+    await browser.close();
     return { error };
   }
 
